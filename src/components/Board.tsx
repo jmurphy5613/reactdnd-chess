@@ -31,8 +31,8 @@ const Board:React.FC<BoardProps> = ({ knightPosition }) => {
     return (
         <div
             style={{
-                width: "100%",
-                height: "100%",
+                width: "700px",
+                height: "700px",
                 display: "flex",
                 flexWrap: "wrap",
             }}
