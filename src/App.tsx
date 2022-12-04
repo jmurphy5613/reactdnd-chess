@@ -4,7 +4,7 @@ import Board from "./components/Board";
 
 function App() {
 
-    const [knightX, setKnightX] = useState(1)
+    const [knightX, setKnightX] = useState(0)
     const [knightY, setKnightY] = useState(0)
 
     setTimeout(() => {

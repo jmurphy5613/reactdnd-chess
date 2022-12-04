@@ -1,6 +1,8 @@
 import React from "react";
 import Square from "./Square";
 import Knight from "./Knight";
+import { DndProvider } from 'react-dnd'
+import { HTML5Backend } from 'react-dnd-html5-backend'
 
 type BoardProps = {
     knightPosition: Array<number>
@@ -29,16 +31,18 @@ const Board:React.FC<BoardProps> = ({ knightPosition }) => {
     }
 
     return (
-        <div
-            style={{
-                width: "700px",
-                height: "700px",
-                display: "flex",
-                flexWrap: "wrap",
-            }}
-        >
-            {squares}
-        </div>
+        <DndProvider backend={HTML5Backend}>
+            <div
+                style={{
+                    width: "700px",
+                    height: "700px",
+                    display: "flex",
+                    flexWrap: "wrap",
+                }}
+            >
+                {squares}
+            </div>
+        </DndProvider>
     );
 }
 
